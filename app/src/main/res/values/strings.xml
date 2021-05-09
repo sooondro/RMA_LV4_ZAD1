@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RMA_LV4_ZAD1</string>
+    <string name="label_blueBird">Blue bird</string>
+    <string name="label_redBird">Red bird</string>
+    <string name="label_greenBird">Green bird</string>
+    <string name="label_yellowBird">Yellow bird</string>
+    <string name="label_resetValues">Reset</string>
 </resources>
