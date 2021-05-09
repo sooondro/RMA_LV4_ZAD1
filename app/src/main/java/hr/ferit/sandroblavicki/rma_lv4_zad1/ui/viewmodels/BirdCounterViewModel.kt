@@ -5,7 +5,7 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import hr.ferit.sandroblavicki.rma_lv4_zad1.model.BirdCounter
 
-class BirdCounterViewModel(private val birdCounter: BirdCounter) : ViewModel() {
+class BirdCounterViewModel() : ViewModel() {
 
     private val counter = MutableLiveData<BirdCounter>(BirdCounter())
 
@@ -13,7 +13,7 @@ class BirdCounterViewModel(private val birdCounter: BirdCounter) : ViewModel() {
     val birdColor = Transformations.map(counter) {it.birdColor}
 
 
-    fun seeBird() = counter.value?.seeBird()
+    fun seeBird(color: Int) = counter.value?.seeBird(color)
     fun resetBirdCount() = counter.value?.resetBirdCounter()
 
 }

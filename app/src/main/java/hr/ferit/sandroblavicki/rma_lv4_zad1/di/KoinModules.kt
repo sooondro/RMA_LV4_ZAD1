@@ -1,5 +1,6 @@
 package hr.ferit.sandroblavicki.rma_lv4_zad1.di
 
+import get
 import hr.ferit.sandroblavicki.rma_lv4_zad1.model.BirdCounter
 import hr.ferit.sandroblavicki.rma_lv4_zad1.ui.viewmodels.BirdCounterViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -10,5 +11,5 @@ val appModule = module {
 }
 
 val viewModelModule = module {
-    viewModel<BirdCounterViewModel> { BirdCounterViewModel(get()) }
+    viewModel<BirdCounterViewModel> { BirdCounterViewModel() }
 }

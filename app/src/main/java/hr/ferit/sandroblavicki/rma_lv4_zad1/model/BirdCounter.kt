@@ -11,8 +11,14 @@ class BirdCounter {
     val birdColor: LiveData<Int> = _birdColor
 
 
-    fun seeBird() = _birdsSeen.value?.let { _birdsSeen.postValue(it + 1) }
-    fun resetBirdCounter() = _birdsSeen.value?.let { _birdsSeen.postValue(0) }
+    fun seeBird(color: Int) {
+        _birdsSeen.value?.let { _birdsSeen.postValue(it + 1) }
+        _birdColor.value?.let { _birdColor.postValue(color) }
+    }
+    fun resetBirdCounter() {
+        _birdsSeen.value?.let { _birdsSeen.postValue(0) }
+        _birdColor.value?.let { _birdColor.postValue(0) }
+    }
 
 
 }
